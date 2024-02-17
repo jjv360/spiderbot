@@ -1,0 +1,15 @@
+{
+    "name": "spiderbot",
+    "version": "1.0.0",
+    "description": "Testing some RPi hardware stuff.",
+    "main": "src/index.mjs",
+    "private": true,
+    "scripts": {
+        "start": "sudo node ./src/index.mjs"
+    },
+    "author": "jjv360",
+    "license": "ISC",
+    "dependencies": {
+        "raspi-i2c": "^6.2.4"
+    }
+}
