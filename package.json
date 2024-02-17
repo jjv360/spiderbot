@@ -8,8 +8,5 @@
         "start": "sudo node ./src/index.mjs"
     },
     "author": "jjv360",
-    "license": "ISC",
-    "dependencies": {
-        "raspi-i2c": "^6.2.4"
-    }
+    "license": "ISC"
 }

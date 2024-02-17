@@ -1,5 +1,5 @@
-import { init } from 'raspi'
-import { I2C } from 'raspi-i2c'
+import i2c from 'i2c-bus'
+import { I2CServo } from './drivers/I2CServo.mjs'
 
 /** Main function */
 async function main() {
@@ -11,16 +11,13 @@ async function main() {
     console.log(' +-------------------------+')
     console.log('')
 
-    // Init RPI lib
-    console.log('Starting RPi hardware interface...')
-    await new Promise(c => init(c))
-
     // Start I2C
     console.log('Starting I2C...')
-    const i2c = new I2C()
+    const i2c = await i2c.openPromisified(1)
 
     // Done
-    console.log('Ready')
+    console.log('Creating drivers...')
+    const leg1a = new I2CServo(i2c, 0x40, 0)
 
 }
 
