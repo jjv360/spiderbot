@@ -8,5 +8,9 @@
         "start": "sudo node ./src/index.mjs"
     },
     "author": "jjv360",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "i2c-bus": "^5.2.3",
+        "pca9685": "^5.0.0"
+    }
 }
