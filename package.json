@@ -5,11 +5,13 @@
     "main": "src/index.mjs",
     "private": true,
     "scripts": {
+        "upload": "rm -r ./node_modules || true && scp -r ./ jjv360@jjv360-spiderbot.local:~/spiderbot",
         "start": "sudo node ./src/index.mjs"
     },
     "author": "jjv360",
     "license": "ISC",
     "dependencies": {
+        "@inquirer/prompts": "^4.0.0",
         "i2c-bus": "^5.2.3",
         "pca9685": "^5.0.0"
     }
